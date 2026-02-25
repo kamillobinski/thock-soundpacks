@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v6
         with:
@@ -32,14 +33,22 @@ jobs:
       - name: Load build metadata
         run: cat .github/outputs/release.env >> $GITHUB_ENV
 
-      - name: Deploy to main
+      - name: Create release PR
         run: |
+          BRANCH_NAME="release/$(echo $SOUNDPACK_PATH | tr '/' '-')-v$VERSION"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout main
+          git checkout -b "$BRANCH_NAME" origin/main
           mkdir -p "$SOUNDPACK_PATH"
           cp .github/outputs/soundpack.zip "$SOUNDPACK_PATH/$UUID.zip"
           cp .github/outputs/manifest.json manifest.json
           git add manifest.json "$SOUNDPACK_PATH/$UUID.zip"
           git commit -m "release($SOUNDPACK_PATH): v$VERSION"
-          git push origin main
+          git push origin "$BRANCH_NAME"
+          gh pr create \
+            --base main \
+            --head "$BRANCH_NAME" \
+            --title "release($SOUNDPACK_PATH): v$VERSION" \
+            --body "Automated release of \`$SOUNDPACK_PATH\` v$VERSION."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
