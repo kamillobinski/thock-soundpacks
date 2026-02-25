@@ -54,17 +54,6 @@ def load_config(soundpack_path):
     return json.loads((Path(soundpack_path) / "config.json").read_text())
 
 
-def add_id_to_config(soundpack_path, soundpack_uuid, config):
-    config["id"] = soundpack_uuid
-    config_path = Path(soundpack_path) / "config.json"
-
-    with open(config_path, 'w', encoding='utf-8') as f:
-        json.dump(config, f, indent=2)
-
-    print(f"Updated {config_path} with UUID: {soundpack_uuid}")
-    return config
-
-
 def load_manifest():
     run(["git", "fetch", "origin", "main"])
     raw = run(["git", "show", "origin/main:manifest.json"])
@@ -91,6 +80,22 @@ def create_zip(soundpack_path):
         for file in sorted(Path(soundpack_path).iterdir()):
             if file.is_file() and file.suffix != ".zip":
                 zf.write(file, file.name)
+    size = zip_path.stat().st_size
+    print(f"Created zip: {size} bytes")
+    return size
+
+
+def create_zip(soundpack_path, soundpack_uuid, config):
+    OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
+    zip_path = OUTPUTS_DIR / "soundpack.zip"
+    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+        for file in sorted(Path(soundpack_path).iterdir()):
+            if file.is_file() and file.suffix != ".zip":
+                if file.name == "config.json":
+                    config["id"] = soundpack_uuid
+                    zf.writestr(file.name, json.dumps(config, indent=2) + "\n")
+                else:
+                    zf.write(file, file.name)
     size = zip_path.stat().st_size
     print(f"Created zip: {size} bytes")
     return size
@@ -148,9 +153,8 @@ def main():
 
     soundpack_type = Path(soundpack_path).parts[0]
     soundpack_uuid = get_or_create_uuid(manifest, soundpack_type, soundpack_path)
-    config = add_id_to_config(soundpack_path, soundpack_uuid, config)
 
-    zip_size = create_zip(soundpack_path)
+    zip_size = create_zip(soundpack_path, soundpack_uuid, config)
     entry = build_manifest_entry(soundpack_uuid, config, soundpack_path, zip_size)
     update_manifest(manifest, soundpack_type, soundpack_path, entry)
 
