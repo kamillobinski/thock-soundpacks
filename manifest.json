@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-02-25T18:43:10Z",
+  "lastUpdated": "2026-02-25T19:02:37Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -22,6 +22,27 @@
         "license": {
           "type": "MIT",
           "url": "https://github.com/tplai/kbsim/blob/master/LICENSE.md"
+        }
+      },
+      {
+        "id": "26dee47d-5f96-4af5-bad5-a54de0f01612",
+        "metadata": {
+          "name": "Cherry MX Black ABS",
+          "brand": "Cherry MX",
+          "author": "mechvibes",
+          "version": "1.0.0",
+          "supportsKeyUp": false
+        },
+        "content": {
+          "path": "keyboard/cherry_mx/mechvibes/black_abs"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/black_abs/26dee47d-5f96-4af5-bad5-a54de0f01612.zip",
+          "size": 468384
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/hainguyents13/mechvibes/blob/main/LICENSE"
         }
       }
     ],
