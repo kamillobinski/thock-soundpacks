@@ -44,7 +44,7 @@ jobs:
           cp .github/outputs/manifest.json manifest.json
           git add manifest.json "$SOUNDPACK_PATH/$UUID.zip"
           git commit -m "release($SOUNDPACK_PATH): v$VERSION"
-          git push origin "$BRANCH_NAME"
+          git push --force origin "$BRANCH_NAME"
           gh pr create \
             --base main \
             --head "$BRANCH_NAME" \
