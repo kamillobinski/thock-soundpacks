@@ -1,0 +1,163 @@
+#!/usr/bin/env python3
+import json
+import os
+import subprocess
+import sys
+import uuid
+import zipfile
+from datetime import datetime, timezone
+from pathlib import Path
+
+SOUNDPACK_ROOTS = {"keyboard", "mouse"}
+SOUNDPACK_DEPTH = 4
+OUTPUTS_DIR = Path(".github/outputs")
+
+
+def fail(msg):
+    print(f"::error::{msg}")
+    sys.exit(1)
+
+
+def run(cmd):
+    return subprocess.run(cmd, capture_output=True, text=True).stdout.strip()
+
+
+def is_soundpack_file(path):
+    parts = Path(path).parts
+    return len(parts) >= SOUNDPACK_DEPTH and parts[0] in SOUNDPACK_ROOTS
+
+
+def soundpack_dir(path):
+    return str(Path(*Path(path).parts[:SOUNDPACK_DEPTH]))
+
+
+def get_changed_soundpack():
+    before = os.environ["BEFORE_SHA"]
+    after = os.environ["AFTER_SHA"]
+    changed = run(["git", "diff", "--name-only", before, after]).splitlines()
+    soundpack_files = [f for f in changed if is_soundpack_file(f)]
+
+    if not soundpack_files:
+        print("No soundpack files changed, skipping release")
+        sys.exit(0)
+
+    dirs = {soundpack_dir(f) for f in soundpack_files}
+    if len(dirs) != 1:
+        fail(f"Expected exactly one soundpack, found: {sorted(dirs)}")
+
+    path = dirs.pop()
+    print(f"Detected soundpack: {path}")
+    return path
+
+
+def load_config(soundpack_path):
+    return json.loads((Path(soundpack_path) / "config.json").read_text())
+
+
+def add_id_to_config(soundpack_path, soundpack_uuid, config):
+    config["id"] = soundpack_uuid
+    config_path = Path(soundpack_path) / "config.json"
+
+    with open(config_path, 'w', encoding='utf-8') as f:
+        json.dump(config, f, indent=2)
+
+    print(f"Updated {config_path} with UUID: {soundpack_uuid}")
+    return config
+
+
+def load_manifest():
+    run(["git", "fetch", "origin", "main"])
+    raw = run(["git", "show", "origin/main:manifest.json"])
+    if not raw:
+        return {"version": "1.0.0", "soundpacks": {"keyboard": [], "mouse": []}}
+    return json.loads(raw)
+
+
+def get_or_create_uuid(manifest, soundpack_type, soundpack_path):
+    for entry in manifest.get("soundpacks", {}).get(soundpack_type, []):
+        if entry.get("content", {}).get("path") == soundpack_path:
+            existing = entry["id"]
+            print(f"Reusing existing UUID: {existing}")
+            return existing
+    new_id = str(uuid.uuid4())
+    print(f"Generated new UUID: {new_id}")
+    return new_id
+
+
+def create_zip(soundpack_path):
+    OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
+    zip_path = OUTPUTS_DIR / "soundpack.zip"
+    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+        for file in sorted(Path(soundpack_path).iterdir()):
+            if file.is_file() and file.suffix != ".zip":
+                zf.write(file, file.name)
+    size = zip_path.stat().st_size
+    print(f"Created zip: {size} bytes")
+    return size
+
+
+def build_manifest_entry(soundpack_uuid, config, soundpack_path, zip_size):
+    repo = os.environ.get("GITHUB_REPOSITORY", "kamillobinski/thock-soundpacks")
+    meta = config["metadata"]
+    return {
+        "id": soundpack_uuid,
+        "metadata": {
+            "name": meta["name"],
+            "brand": meta["brand"],
+            "author": meta["author"],
+            "version": meta["version"],
+            "supportsKeyUp": meta["supportsKeyUp"],
+        },
+        "content": {
+            "path": soundpack_path,
+        },
+        "download": {
+            "url": f"https://github.com/{repo}/raw/refs/heads/main/{soundpack_path}/{soundpack_uuid}.zip",
+            "size": zip_size,
+        },
+        "license": {
+            "type": config["license"]["type"],
+            "url": config["license"]["url"],
+        },
+    }
+
+
+def update_manifest(manifest, soundpack_type, soundpack_path, entry):
+    entries = manifest.setdefault("soundpacks", {}).setdefault(soundpack_type, [])
+    for i, e in enumerate(entries):
+        if e.get("content", {}).get("path") == soundpack_path:
+            entries[i] = entry
+            return
+    entries.append(entry)
+
+
+def write_outputs(soundpack_uuid, soundpack_path, version, manifest):
+    manifest["lastUpdated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    (OUTPUTS_DIR / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    (OUTPUTS_DIR / "release.env").write_text(
+        f"UUID={soundpack_uuid}\n"
+        f"SOUNDPACK_PATH={soundpack_path}\n"
+        f"VERSION={version}\n"
+    )
+
+
+def main():
+    soundpack_path = get_changed_soundpack()
+    config = load_config(soundpack_path)
+    manifest = load_manifest()
+
+    soundpack_type = Path(soundpack_path).parts[0]
+    soundpack_uuid = get_or_create_uuid(manifest, soundpack_type, soundpack_path)
+    config = add_id_to_config(soundpack_path, soundpack_uuid, config)
+
+    zip_size = create_zip(soundpack_path)
+    entry = build_manifest_entry(soundpack_uuid, config, soundpack_path, zip_size)
+    update_manifest(manifest, soundpack_type, soundpack_path, entry)
+
+    version = config["metadata"]["version"]
+    write_outputs(soundpack_uuid, soundpack_path, version, manifest)
+    print(f"Version: {version}")
+
+
+if __name__ == "__main__":
+    main()

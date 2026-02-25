@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - dev
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+
+      - name: Build soundpack
+        run: python .github/scripts/release.py
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+
+      - name: Load build metadata
+        run: cat .github/outputs/release.env >> $GITHUB_ENV
+
+      - name: Deploy to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout main
+          mkdir -p "$SOUNDPACK_PATH"
+          cp .github/outputs/soundpack.zip "$SOUNDPACK_PATH/$UUID.zip"
+          cp .github/outputs/manifest.json manifest.json
+          git add manifest.json "$SOUNDPACK_PATH/$UUID.zip"
+          git commit -m "release($SOUNDPACK_PATH): v$VERSION"
+          git push origin main
