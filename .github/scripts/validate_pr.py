@@ -9,7 +9,7 @@ SOUNDPACK_ROOTS = {"keyboard", "mouse"}
 SOUNDPACK_DEPTH = 4
 AUDIO_EXTENSIONS = {".mp3", ".wav"}
 REQUIRED_TOP_LEVEL = {"metadata", "license", "sounds"}
-REQUIRED_METADATA = {"name", "brand", "author", "version", "supportsKeyUp"}
+REQUIRED_METADATA = {"name", "brand", "author", "supportsKeyUp"}
 REQUIRED_LICENSE = {"type", "url"}
 
 
@@ -84,9 +84,6 @@ def validate_config_schema(config):
     if not isinstance(metadata["supportsKeyUp"], bool):
         fail("config.json metadata.supportsKeyUp must be a boolean")
 
-    if not isinstance(metadata["version"], str) or not metadata["version"].strip():
-        fail("config.json metadata.version must be a non-empty string")
-
 
 def validate_audio_files(soundpack_path, config):
     missing = []
@@ -101,48 +98,12 @@ def validate_audio_files(soundpack_path, config):
         fail(f"Missing audio files referenced in config.json: {missing}")
 
 
-def fetch_main_manifest():
-    run(["git", "fetch", "origin", "main"])
-    raw = run(["git", "show", "origin/main:manifest.json"])
-    if not raw:
-        return None
-    try:
-        return json.loads(raw)
-    except json.JSONDecodeError as e:
-        fail(f"Failed to parse manifest.json from main: {e}")
-
-
-def check_version_bump(soundpack_path, current_version):
-    manifest = fetch_main_manifest()
-    if manifest is None:
-        print("Skipping version check, manifest.json does not exist on main")
-        return
-
-    soundpack_type = Path(soundpack_path).parts[0]
-    entries = manifest.get("soundpacks", {}).get(soundpack_type, [])
-    matched = next(
-        (e for e in entries if e.get("content", {}).get("path") == soundpack_path),
-        None,
-    )
-
-    if matched is None:
-        print(f"Skipping version check, soundpack {soundpack_path} not found in manifest")
-        return
-
-    main_version = matched.get("metadata", {}).get("version")
-    if current_version == main_version:
-        fail(f"Version {current_version} already exists on main")
-
-    print(f"Version bump detected: {main_version} → {current_version}")
-
-
 def main():
     changed_files = get_changed_files()
     soundpack_path = resolve_soundpack_path(changed_files)
     config = load_config(soundpack_path)
     validate_config_schema(config)
     validate_audio_files(soundpack_path, config)
-    check_version_bump(soundpack_path, config["metadata"]["version"])
     print("All checks passed")
 
 

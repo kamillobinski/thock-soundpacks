@@ -58,7 +58,7 @@ def load_manifest():
     run(["git", "fetch", "origin", "main"])
     raw = run(["git", "show", "origin/main:manifest.json"])
     if not raw:
-        return {"version": "1.0.0", "soundpacks": {"keyboard": [], "mouse": []}}
+        return {"soundpacks": {"keyboard": [], "mouse": []}}
     return json.loads(raw)
 
 
@@ -73,19 +73,8 @@ def get_or_create_uuid(manifest, soundpack_type, soundpack_path):
     return new_id
 
 
-def create_zip(soundpack_path):
-    OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
-    zip_path = OUTPUTS_DIR / "soundpack.zip"
-    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
-        for file in sorted(Path(soundpack_path).iterdir()):
-            if file.is_file() and file.suffix != ".zip":
-                zf.write(file, file.name)
-    size = zip_path.stat().st_size
-    print(f"Created zip: {size} bytes")
-    return size
 
-
-def create_zip(soundpack_path, soundpack_uuid, config):
+def create_zip(soundpack_path, soundpack_uuid, soundpack_type, config):
     OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
     zip_path = OUTPUTS_DIR / "soundpack.zip"
     with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
@@ -93,6 +82,7 @@ def create_zip(soundpack_path, soundpack_uuid, config):
             if file.is_file() and file.suffix != ".zip":
                 if file.name == "config.json":
                     config["id"] = soundpack_uuid
+                    config["metadata"]["category"] = soundpack_type
                     zf.writestr(file.name, json.dumps(config, indent=2) + "\n")
                 else:
                     zf.write(file, file.name)
@@ -110,8 +100,8 @@ def build_manifest_entry(soundpack_uuid, config, soundpack_path, zip_size):
             "name": meta["name"],
             "brand": meta["brand"],
             "author": meta["author"],
-            "version": meta["version"],
             "supportsKeyUp": meta["supportsKeyUp"],
+            "category": meta["category"],
         },
         "content": {
             "path": soundpack_path,
@@ -136,13 +126,12 @@ def update_manifest(manifest, soundpack_type, soundpack_path, entry):
     entries.append(entry)
 
 
-def write_outputs(soundpack_uuid, soundpack_path, version, manifest):
+def write_outputs(soundpack_uuid, soundpack_path, manifest):
     manifest["lastUpdated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     (OUTPUTS_DIR / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     (OUTPUTS_DIR / "release.env").write_text(
         f"UUID={soundpack_uuid}\n"
         f"SOUNDPACK_PATH={soundpack_path}\n"
-        f"VERSION={version}\n"
     )
 
 
@@ -154,13 +143,11 @@ def main():
     soundpack_type = Path(soundpack_path).parts[0]
     soundpack_uuid = get_or_create_uuid(manifest, soundpack_type, soundpack_path)
 
-    zip_size = create_zip(soundpack_path, soundpack_uuid, config)
+    zip_size = create_zip(soundpack_path, soundpack_uuid, soundpack_type, config)
     entry = build_manifest_entry(soundpack_uuid, config, soundpack_path, zip_size)
     update_manifest(manifest, soundpack_type, soundpack_path, entry)
 
-    version = config["metadata"]["version"]
-    write_outputs(soundpack_uuid, soundpack_path, version, manifest)
-    print(f"Version: {version}")
+    write_outputs(soundpack_uuid, soundpack_path, manifest)
 
 
 if __name__ == "__main__":
