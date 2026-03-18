@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-18T02:15:39Z",
+  "lastUpdated": "2026-03-18T02:27:20Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -123,6 +123,27 @@
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/brown_abs/186ca33e-9998-4a28-974c-c21ac353c16e.zip",
           "size": 424277
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/hainguyents13/mechvibes/blob/main/LICENSE"
+        }
+      },
+      {
+        "id": "3aa3c556-ab47-4ab9-a791-498bf9910bf7",
+        "metadata": {
+          "name": "Cherry MX Brown PBT",
+          "brand": "Cherry MX",
+          "author": "mechvibes",
+          "supportsKeyUp": false,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/cherry_mx/mechvibes/brown_pbt"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/brown_pbt/3aa3c556-ab47-4ab9-a791-498bf9910bf7.zip",
+          "size": 503010
         },
         "license": {
           "type": "MIT",
