@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-18T02:38:24Z",
+  "lastUpdated": "2026-03-18T03:34:02Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -193,6 +193,28 @@
         }
       }
     ],
-    "mouse": []
+    "mouse": [
+      {
+        "id": "f6e8d918-0ed2-40f8-8c4e-52ed4f966764",
+        "metadata": {
+          "name": "Pixabay-01",
+          "brand": "unknown",
+          "author": "pixabay",
+          "supportsKeyUp": true,
+          "category": "mouse"
+        },
+        "content": {
+          "path": "mouse/unknown/pixabay/pixabay_01"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/mouse/unknown/pixabay/pixabay_01/f6e8d918-0ed2-40f8-8c4e-52ed4f966764.zip",
+          "size": 8320
+        },
+        "license": {
+          "type": "Pixabay Content License",
+          "url": "https://pixabay.com/pl/service/license-summary/"
+        }
+      }
+    ]
   }
 }
