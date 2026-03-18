@@ -5,6 +5,10 @@
     "author": "mechvibes",
     "supportsKeyUp": false
   },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/hainguyents13/mechvibes/blob/main/LICENSE"
+  },
   "sounds": {
     "default": {
       "down": [
