@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-18T01:53:16Z",
+  "lastUpdated": "2026-03-18T02:00:03Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -39,6 +39,27 @@
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/black_abs/de401889-0ccb-4522-a213-836aad88c447.zip",
           "size": 468389
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/hainguyents13/mechvibes/blob/main/LICENSE"
+        }
+      },
+      {
+        "id": "980c6cc1-7daf-4584-8b0e-643b3a811a6d",
+        "metadata": {
+          "name": "Cherry MX Black PBT",
+          "brand": "Cherry MX",
+          "author": "mechvibes",
+          "supportsKeyUp": false,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/cherry_mx/mechvibes/black_pbt"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/black_pbt/980c6cc1-7daf-4584-8b0e-643b3a811a6d.zip",
+          "size": 403962
         },
         "license": {
           "type": "MIT",
