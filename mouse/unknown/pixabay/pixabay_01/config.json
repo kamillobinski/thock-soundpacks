@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "name": "Pixabay-01",
+    "brand": "unknown",
+    "author": "pixabay",
+    "supportsKeyUp": true
+  },
+  "license": {
+    "type": "Pixabay Content License",
+    "url": "https://pixabay.com/pl/service/license-summary/"
+  },
+  "sounds": {
+    "left": {
+      "down": [
+        "left_down.wav"
+      ],
+      "up": [
+        "left_up.wav"
+      ]
+    },
+    "right": {
+      "down": [
+        "right_down.wav"
+      ],
+      "up": [
+        "right_up.wav"
+      ]
+    }
+  }
+}
