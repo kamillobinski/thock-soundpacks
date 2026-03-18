@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-18T02:00:03Z",
+  "lastUpdated": "2026-03-18T02:07:11Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -60,6 +60,27 @@
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/black_pbt/980c6cc1-7daf-4584-8b0e-643b3a811a6d.zip",
           "size": 403962
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/hainguyents13/mechvibes/blob/main/LICENSE"
+        }
+      },
+      {
+        "id": "cf535c6d-9cc7-46a0-bf53-af6d3aeef534",
+        "metadata": {
+          "name": "Cherry MX Blue ABS",
+          "brand": "Cherry MX",
+          "author": "mechvibes",
+          "supportsKeyUp": false,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/cherry_mx/mechvibes/blue_abs"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/blue_abs/cf535c6d-9cc7-46a0-bf53-af6d3aeef534.zip",
+          "size": 507900
         },
         "license": {
           "type": "MIT",
