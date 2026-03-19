@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "name": "Razer Orochi V2",
+    "brand": "Razer",
+    "author": "Sadiquecat",
+    "supportsKeyUp": true,
+    "category": "mouse"
+  },
+  "license": {
+    "type": "CC0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "sounds": {
+    "left": {
+      "down": [
+        "1.wav",
+        "2.wav",
+        "3.wav"
+      ],
+      "up": [
+        "4.wav",
+        "5.wav",
+        "6.wav"
+      ]
+    },
+    "right": {
+      "down": [
+        "7.wav",
+        "8.wav",
+        "9.wav"
+      ],
+      "up": [
+        "10.wav",
+        "11.wav",
+        "12.wav"
+      ]
+    }
+  }
+}
