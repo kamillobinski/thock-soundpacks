@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "name": "Everglide Oreo",
+    "name": "Oreo",
     "brand": "Everglide",
     "author": "mechvibes",
-    "supportsKeyUp": true
+    "supportsKeyUp": false
   },
   "license": {
     "type": "MIT",

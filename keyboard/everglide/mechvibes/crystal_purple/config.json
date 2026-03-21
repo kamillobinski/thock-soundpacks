@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "name": "Everglide Crystal Purple",
+    "name": "Crystal Purple",
     "brand": "Everglide",
     "author": "mechvibes",
-    "supportsKeyUp": true
+    "supportsKeyUp": false
   },
   "license": {
     "type": "MIT",
