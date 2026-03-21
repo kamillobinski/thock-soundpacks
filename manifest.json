@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-19T19:57:35Z",
+  "lastUpdated": "2026-03-21T09:15:49Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -190,6 +190,27 @@
         "license": {
           "type": "MIT",
           "url": "https://github.com/hainguyents13/mechvibes/blob/main/LICENSE"
+        }
+      },
+      {
+        "id": "4da844a6-346e-4361-84fd-5bc142ff975e",
+        "metadata": {
+          "name": "Drop Holy Panda",
+          "brand": "Drop",
+          "author": "tplai",
+          "supportsKeyUp": true,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/drop/tplai/holy_panda"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/drop/tplai/holy_panda/4da844a6-346e-4361-84fd-5bc142ff975e.zip",
+          "size": 21652
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/tplai/kbsim/blob/master/LICENSE.md"
         }
       }
     ],
