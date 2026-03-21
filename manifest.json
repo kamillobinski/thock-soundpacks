@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T14:54:22Z",
+  "lastUpdated": "2026-03-21T14:55:17Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -90,7 +90,7 @@
       {
         "id": "ca2d54d7-31d0-4177-b26a-43d99a3bcaaf",
         "metadata": {
-          "name": "Cherry MX Blue PBT",
+          "name": "Blue PBT",
           "brand": "Cherry MX",
           "author": "mechvibes",
           "supportsKeyUp": false,
@@ -101,7 +101,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/blue_pbt/ca2d54d7-31d0-4177-b26a-43d99a3bcaaf.zip",
-          "size": 497494
+          "size": 497492
         },
         "license": {
           "type": "MIT",
