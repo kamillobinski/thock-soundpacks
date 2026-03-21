@@ -447,27 +447,6 @@
     ],
     "mouse": [
       {
-        "id": "fd09c274-76e2-493a-b3d7-1dbc4add746f",
-        "metadata": {
-          "name": "Pixabay-01",
-          "brand": "Unknown",
-          "author": "pixabay",
-          "supportsKeyUp": true,
-          "category": "mouse"
-        },
-        "content": {
-          "path": "mouse/unknown/pixabay/pixabay_01"
-        },
-        "download": {
-          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/mouse/unknown/pixabay/pixabay_01/fd09c274-76e2-493a-b3d7-1dbc4add746f.zip",
-          "size": 8320
-        },
-        "license": {
-          "type": "Pixabay Content License",
-          "url": "https://pixabay.com/pl/service/license-summary/"
-        }
-      },
-      {
         "id": "3222385c-d428-4d98-8ce9-1cbc992c3373",
         "metadata": {
           "name": "Orochi V2",
