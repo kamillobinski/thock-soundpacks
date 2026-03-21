@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T09:41:30Z",
+  "lastUpdated": "2026-03-21T09:45:50Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -274,6 +274,27 @@
         "license": {
           "type": "MIT",
           "url": "https://github.com/hainguyents13/mechvibes/blob/main/LICENSE"
+        }
+      },
+      {
+        "id": "b9bfb429-16c6-449f-aa85-5da083696f68",
+        "metadata": {
+          "name": "Gateron Ink Black",
+          "brand": "Gateron",
+          "author": "tplai",
+          "supportsKeyUp": true,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/gateron/tplai/ink_black"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/gateron/tplai/ink_black/b9bfb429-16c6-449f-aa85-5da083696f68.zip",
+          "size": 20058
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/tplai/kbsim/blob/master/LICENSE.md"
         }
       }
     ],
