@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "name": "Pixabay-01",
+    "name": "Unknown",
     "brand": "Unknown",
     "author": "pixabay",
     "supportsKeyUp": true,
@@ -13,18 +13,18 @@
   "sounds": {
     "left": {
       "down": [
-        "left_down.wav"
+        "1.wav"
       ],
       "up": [
-        "left_up.wav"
+        "2.wav"
       ]
     },
     "right": {
       "down": [
-        "right_down.wav"
+        "3.wav"
       ],
       "up": [
-        "right_up.wav"
+        "4.wav"
       ]
     }
   }
