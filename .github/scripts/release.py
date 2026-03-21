@@ -31,7 +31,12 @@ def soundpack_dir(path):
     return str(Path(*Path(path).parts[:SOUNDPACK_DEPTH]))
 
 
-def get_changed_soundpack():
+def allow_multiple():
+    msg = run(["git", "log", "-1", "--format=%s"])
+    return "[allow-multiple]" in msg
+
+
+def get_changed_soundpacks():
     before = os.environ["BEFORE_SHA"]
     after = os.environ["AFTER_SHA"]
     changed = run(["git", "diff", "--name-only", before, after]).splitlines()
@@ -42,12 +47,14 @@ def get_changed_soundpack():
         sys.exit(0)
 
     dirs = {soundpack_dir(f) for f in soundpack_files}
-    if len(dirs) != 1:
+
+    if len(dirs) != 1 and not allow_multiple():
         fail(f"Expected exactly one soundpack, found: {sorted(dirs)}")
 
-    path = dirs.pop()
-    print(f"Detected soundpack: {path}")
-    return path
+    paths = sorted(dirs)
+    for path in paths:
+        print(f"Detected soundpack: {path}")
+    return paths
 
 
 def load_config(soundpack_path):
@@ -73,10 +80,9 @@ def get_or_create_uuid(manifest, soundpack_type, soundpack_path):
     return new_id
 
 
-
 def create_zip(soundpack_path, soundpack_uuid, soundpack_type, config):
     OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
-    zip_path = OUTPUTS_DIR / "soundpack.zip"
+    zip_path = OUTPUTS_DIR / f"{soundpack_uuid}.zip"
     with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
         for file in sorted(Path(soundpack_path).iterdir()):
             if file.is_file() and file.suffix != ".zip":
@@ -126,28 +132,29 @@ def update_manifest(manifest, soundpack_type, soundpack_path, entry):
     entries.append(entry)
 
 
-def write_outputs(soundpack_uuid, soundpack_path, manifest):
+def write_outputs(releases, manifest):
     manifest["lastUpdated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     (OUTPUTS_DIR / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
-    (OUTPUTS_DIR / "release.env").write_text(
-        f"UUID={soundpack_uuid}\n"
-        f"SOUNDPACK_PATH={soundpack_path}\n"
-    )
+    (OUTPUTS_DIR / "releases.json").write_text(json.dumps(releases, indent=2) + "\n")
 
 
 def main():
-    soundpack_path = get_changed_soundpack()
-    config = load_config(soundpack_path)
+    soundpack_paths = get_changed_soundpacks()
     manifest = load_manifest()
 
-    soundpack_type = Path(soundpack_path).parts[0]
-    soundpack_uuid = get_or_create_uuid(manifest, soundpack_type, soundpack_path)
+    releases = []
+    for soundpack_path in soundpack_paths:
+        config = load_config(soundpack_path)
+        soundpack_type = Path(soundpack_path).parts[0]
+        soundpack_uuid = get_or_create_uuid(manifest, soundpack_type, soundpack_path)
 
-    zip_size = create_zip(soundpack_path, soundpack_uuid, soundpack_type, config)
-    entry = build_manifest_entry(soundpack_uuid, config, soundpack_path, zip_size)
-    update_manifest(manifest, soundpack_type, soundpack_path, entry)
+        zip_size = create_zip(soundpack_path, soundpack_uuid, soundpack_type, config)
+        entry = build_manifest_entry(soundpack_uuid, config, soundpack_path, zip_size)
+        update_manifest(manifest, soundpack_type, soundpack_path, entry)
 
-    write_outputs(soundpack_uuid, soundpack_path, manifest)
+        releases.append({"uuid": soundpack_uuid, "path": soundpack_path})
+
+    write_outputs(releases, manifest)
 
 
 if __name__ == "__main__":

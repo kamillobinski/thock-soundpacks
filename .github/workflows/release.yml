@@ -30,25 +30,38 @@ jobs:
           BEFORE_SHA: ${{ github.event.before }}
           AFTER_SHA: ${{ github.sha }}
 
-      - name: Load build metadata
-        run: cat .github/outputs/release.env >> $GITHUB_ENV
-
       - name: Create release PR
         run: |
-          BRANCH_NAME="release/$(echo $SOUNDPACK_PATH | tr '/' '-')"
+          RELEASES=$(cat .github/outputs/releases.json)
+          COUNT=$(echo "$RELEASES" | python3 -c "import sys,json; print(len(json.load(sys.stdin)))")
+
+          if [ "$COUNT" -eq 1 ]; then
+            SOUNDPACK_PATH=$(echo "$RELEASES" | python3 -c "import sys,json; print(json.load(sys.stdin)[0]['path'])")
+            BRANCH_NAME="release/$(echo $SOUNDPACK_PATH | tr '/' '-')"
+            COMMIT_MSG="release($SOUNDPACK_PATH)"
+            PR_TITLE="release($SOUNDPACK_PATH)"
+            PR_BODY="Automated release of \`$SOUNDPACK_PATH\`."
+          else
+            BRANCH_NAME="release/bulk-$(date +%s)"
+            COMMIT_MSG="release(bulk)"
+            PR_TITLE="release(bulk)"
+            PR_BODY="Automated bulk release."
+          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH_NAME" origin/main
-          mkdir -p "$SOUNDPACK_PATH"
-          cp .github/outputs/soundpack.zip "$SOUNDPACK_PATH/$UUID.zip"
+
+          python3 .github/scripts/apply_release.py | xargs git add
           cp .github/outputs/manifest.json manifest.json
-          git add manifest.json "$SOUNDPACK_PATH/$UUID.zip"
-          git commit -m "release($SOUNDPACK_PATH)"
+          git add manifest.json
+
+          git commit -m "$COMMIT_MSG"
           git push --force origin "$BRANCH_NAME"
           gh pr create \
             --base main \
             --head "$BRANCH_NAME" \
-            --title "release($SOUNDPACK_PATH)" \
-            --body "Automated release of \`$SOUNDPACK_PATH\`."
+            --title "$PR_TITLE" \
+            --body "$PR_BODY"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
