@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T15:35:45Z",
+  "lastUpdated": "2026-03-21T15:37:31Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -470,7 +470,7 @@
       {
         "id": "3222385c-d428-4d98-8ce9-1cbc992c3373",
         "metadata": {
-          "name": "Razer Orochi V2",
+          "name": "Orochi V2",
           "brand": "Razer",
           "author": "Sadiquecat",
           "supportsKeyUp": true,
@@ -481,7 +481,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/mouse/razer/sadiquecat/orochi_v2/3222385c-d428-4d98-8ce9-1cbc992c3373.zip",
-          "size": 30170
+          "size": 30169
         },
         "license": {
           "type": "CC0",
