@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T14:45:55Z",
+  "lastUpdated": "2026-03-21T14:52:36Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -48,7 +48,7 @@
       {
         "id": "980c6cc1-7daf-4584-8b0e-643b3a811a6d",
         "metadata": {
-          "name": "Cherry MX Black PBT",
+          "name": "Black PBT",
           "brand": "Cherry MX",
           "author": "mechvibes",
           "supportsKeyUp": false,
@@ -59,7 +59,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/black_pbt/980c6cc1-7daf-4584-8b0e-643b3a811a6d.zip",
-          "size": 403962
+          "size": 403959
         },
         "license": {
           "type": "MIT",
