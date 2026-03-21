@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - dev
+  workflow_dispatch:
+    inputs:
+      soundpack_paths:
+        description: 'Soundpack path(s) to rebuild'
+        required: true
 
 concurrency:
   group: release
@@ -29,6 +34,7 @@ jobs:
         env:
           BEFORE_SHA: ${{ github.event.before }}
           AFTER_SHA: ${{ github.sha }}
+          SOUNDPACK_PATHS: ${{ github.event.inputs.soundpack_paths }}
 
       - name: Create release PR
         run: |
@@ -52,7 +58,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH_NAME" origin/main
 
-          python3 .github/scripts/apply_release.py | xargs git add
+          bash .github/outputs/apply.sh | xargs git add
           cp .github/outputs/manifest.json manifest.json
           git add manifest.json
 

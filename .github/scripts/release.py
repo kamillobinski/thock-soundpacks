@@ -37,6 +37,13 @@ def allow_multiple():
 
 
 def get_changed_soundpacks():
+    manual = os.environ.get("SOUNDPACK_PATHS", "").strip()
+    if manual:
+        paths = sorted(p.strip() for p in manual.split(",") if p.strip())
+        for path in paths:
+            print(f"Manual soundpack: {path}")
+        return paths
+
     before = os.environ["BEFORE_SHA"]
     after = os.environ["AFTER_SHA"]
     changed = run(["git", "diff", "--name-only", before, after]).splitlines()
@@ -136,6 +143,15 @@ def write_outputs(releases, manifest):
     manifest["lastUpdated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     (OUTPUTS_DIR / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     (OUTPUTS_DIR / "releases.json").write_text(json.dumps(releases, indent=2) + "\n")
+
+    apply_lines = ["#!/bin/bash"]
+    for r in releases:
+        path = r["path"]
+        uid = r["uuid"]
+        apply_lines.append(f'mkdir -p "{path}"')
+        apply_lines.append(f'cp ".github/outputs/{uid}.zip" "{path}/{uid}.zip"')
+        apply_lines.append(f'echo "{path}/{uid}.zip"')
+    (OUTPUTS_DIR / "apply.sh").write_text("\n".join(apply_lines) + "\n")
 
 
 def main():
