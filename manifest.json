@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T09:45:50Z",
+  "lastUpdated": "2026-03-21T09:55:18Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -291,6 +291,27 @@
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/gateron/tplai/ink_black/b9bfb429-16c6-449f-aa85-5da083696f68.zip",
           "size": 20058
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/tplai/kbsim/blob/master/LICENSE.md"
+        }
+      },
+      {
+        "id": "631754b0-eafe-4b14-b86e-61842f1f195c",
+        "metadata": {
+          "name": "Gateron Ink Red",
+          "brand": "Gateron",
+          "author": "tplai",
+          "supportsKeyUp": true,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/gateron/tplai/ink_red"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/gateron/tplai/ink_red/631754b0-eafe-4b14-b86e-61842f1f195c.zip",
+          "size": 22192
         },
         "license": {
           "type": "MIT",
