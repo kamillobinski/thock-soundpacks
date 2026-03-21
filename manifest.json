@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T14:52:36Z",
+  "lastUpdated": "2026-03-21T14:54:22Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -69,7 +69,7 @@
       {
         "id": "cf535c6d-9cc7-46a0-bf53-af6d3aeef534",
         "metadata": {
-          "name": "Cherry MX Blue ABS",
+          "name": "Blue ABS",
           "brand": "Cherry MX",
           "author": "mechvibes",
           "supportsKeyUp": false,
@@ -80,7 +80,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/blue_abs/cf535c6d-9cc7-46a0-bf53-af6d3aeef534.zip",
-          "size": 507900
+          "size": 507898
         },
         "license": {
           "type": "MIT",
