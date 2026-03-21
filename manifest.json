@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T09:59:18Z",
+  "lastUpdated": "2026-03-21T10:06:44Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -333,6 +333,27 @@
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/gateron/tplai/turquoise_tealios/c556e214-5d78-4fc1-a7fe-3eb3f53152ba.zip",
           "size": 20303
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/tplai/kbsim/blob/master/LICENSE.md"
+        }
+      },
+      {
+        "id": "c573d01e-2d20-4844-9286-a9e628ef8f3b",
+        "metadata": {
+          "name": "Kailh Box Navy",
+          "brand": "Kailh",
+          "author": "tplai",
+          "supportsKeyUp": true,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/kailh/tplai/box_navy"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/kailh/tplai/box_navy/c573d01e-2d20-4844-9286-a9e628ef8f3b.zip",
+          "size": 24065
         },
         "license": {
           "type": "MIT",
