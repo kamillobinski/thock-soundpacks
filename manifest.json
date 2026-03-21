@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T09:31:59Z",
+  "lastUpdated": "2026-03-21T09:39:02Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -232,6 +232,27 @@
         "license": {
           "type": "MIT",
           "url": "https://github.com/tplai/kbsim/blob/master/LICENSE.md"
+        }
+      },
+      {
+        "id": "7a4c575c-2c5f-49f2-bcd0-966f0ac874a6",
+        "metadata": {
+          "name": "Everglide Crystal Purple",
+          "brand": "Everglide",
+          "author": "mechvibes",
+          "supportsKeyUp": true,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/everglide/mechvibes/crystal_purple"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/everglide/mechvibes/crystal_purple/7a4c575c-2c5f-49f2-bcd0-966f0ac874a6.zip",
+          "size": 267362
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/hainguyents13/mechvibes/blob/main/LICENSE"
         }
       }
     ],
