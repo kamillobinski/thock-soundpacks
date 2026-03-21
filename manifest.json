@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T15:37:31Z",
+  "lastUpdated": "2026-03-21T16:01:25Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -442,6 +442,27 @@
         "license": {
           "type": "MIT",
           "url": "https://github.com/webdevcody/type-joy/blob/main/LICENSE"
+        }
+      },
+      {
+        "id": "61861d39-1242-41f5-8cf9-5823c472ce28",
+        "metadata": {
+          "name": "Buckling Spring",
+          "brand": "IBM",
+          "author": "tplai",
+          "supportsKeyUp": true,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/ibm/tplai/buckling_spring"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/ibm/tplai/buckling_spring/61861d39-1242-41f5-8cf9-5823c472ce28.zip",
+          "size": 29635
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/tplai/kbsim/blob/master/LICENSE.md"
         }
       }
     ],
