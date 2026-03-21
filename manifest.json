@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T09:15:49Z",
+  "lastUpdated": "2026-03-21T09:31:59Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -207,6 +207,27 @@
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/drop/tplai/holy_panda/4da844a6-346e-4361-84fd-5bc142ff975e.zip",
           "size": 21652
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/tplai/kbsim/blob/master/LICENSE.md"
+        }
+      },
+      {
+        "id": "23d8cf7b-f99b-49fc-ae84-3f99dc728ad9",
+        "metadata": {
+          "name": "Durock Alpaca",
+          "brand": "Durock",
+          "author": "tplai",
+          "supportsKeyUp": true,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/durock/tplai/alpaca"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/durock/tplai/alpaca/23d8cf7b-f99b-49fc-ae84-3f99dc728ad9.zip",
+          "size": 21929
         },
         "license": {
           "type": "MIT",
