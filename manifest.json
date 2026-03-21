@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T09:55:18Z",
+  "lastUpdated": "2026-03-21T09:59:18Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -312,6 +312,27 @@
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/gateron/tplai/ink_red/631754b0-eafe-4b14-b86e-61842f1f195c.zip",
           "size": 22192
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/tplai/kbsim/blob/master/LICENSE.md"
+        }
+      },
+      {
+        "id": "c556e214-5d78-4fc1-a7fe-3eb3f53152ba",
+        "metadata": {
+          "name": "Gateron Turquoise Tealios",
+          "brand": "Gateron",
+          "author": "tplai",
+          "supportsKeyUp": true,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/gateron/tplai/turquoise_tealios"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/gateron/tplai/turquoise_tealios/c556e214-5d78-4fc1-a7fe-3eb3f53152ba.zip",
+          "size": 20303
         },
         "license": {
           "type": "MIT",
