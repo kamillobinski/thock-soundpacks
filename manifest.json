@@ -1,12 +1,12 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T14:41:14Z",
+  "lastUpdated": "2026-03-21T14:43:33Z",
   "soundpacks": {
     "keyboard": [
       {
         "id": "52722920-07ec-45b4-91cc-6f29cad794d2",
         "metadata": {
-          "name": "Alps SKCM Blue",
+          "name": "SKCM Blue",
           "brand": "Alps",
           "author": "tplai",
           "supportsKeyUp": true,
