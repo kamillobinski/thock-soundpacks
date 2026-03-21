@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T14:55:17Z",
+  "lastUpdated": "2026-03-21T15:06:44Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -111,7 +111,7 @@
       {
         "id": "186ca33e-9998-4a28-974c-c21ac353c16e",
         "metadata": {
-          "name": "Cherry MX Brown ABS",
+          "name": "Brown ABS",
           "brand": "Cherry MX",
           "author": "mechvibes",
           "supportsKeyUp": false,
@@ -122,7 +122,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/brown_abs/186ca33e-9998-4a28-974c-c21ac353c16e.zip",
-          "size": 424277
+          "size": 424274
         },
         "license": {
           "type": "MIT",
@@ -132,7 +132,7 @@
       {
         "id": "3aa3c556-ab47-4ab9-a791-498bf9910bf7",
         "metadata": {
-          "name": "Cherry MX Brown PBT",
+          "name": "Brown PBT",
           "brand": "Cherry MX",
           "author": "mechvibes",
           "supportsKeyUp": false,
@@ -143,7 +143,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/brown_pbt/3aa3c556-ab47-4ab9-a791-498bf9910bf7.zip",
-          "size": 503010
+          "size": 503008
         },
         "license": {
           "type": "MIT",
@@ -153,7 +153,7 @@
       {
         "id": "31071be3-c9ad-44a4-8d38-aaa7fe414a58",
         "metadata": {
-          "name": "Cherry MX Red ABS",
+          "name": "Red ABS",
           "brand": "Cherry MX",
           "author": "mechvibes",
           "supportsKeyUp": false,
@@ -164,7 +164,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/red_abs/31071be3-c9ad-44a4-8d38-aaa7fe414a58.zip",
-          "size": 496269
+          "size": 496267
         },
         "license": {
           "type": "MIT",
@@ -174,7 +174,7 @@
       {
         "id": "e05fa018-400e-4d9c-b357-d5467b07650c",
         "metadata": {
-          "name": "Cherry MX Red PBT",
+          "name": "Red PBT",
           "brand": "Cherry MX",
           "author": "mechvibes",
           "supportsKeyUp": false,
@@ -185,7 +185,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/red_pbt/e05fa018-400e-4d9c-b357-d5467b07650c.zip",
-          "size": 478772
+          "size": 478770
         },
         "license": {
           "type": "MIT",
