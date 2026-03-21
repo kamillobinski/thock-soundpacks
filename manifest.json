@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T10:20:35Z",
+  "lastUpdated": "2026-03-21T10:25:33Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -400,6 +400,27 @@
         "license": {
           "type": "MIT",
           "url": "https://github.com/hainguyents13/mechvibes/blob/main/LICENSE"
+        }
+      },
+      {
+        "id": "ab2657fe-dc0a-4c75-ab74-81d8f56002b0",
+        "metadata": {
+          "name": "Topre Unknown",
+          "brand": "Topre",
+          "author": "tplai",
+          "supportsKeyUp": true,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/topre/tplai/unknown"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/topre/tplai/unknown/ab2657fe-dc0a-4c75-ab74-81d8f56002b0.zip",
+          "size": 26902
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/tplai/kbsim/blob/master/LICENSE.md"
         }
       }
     ],
