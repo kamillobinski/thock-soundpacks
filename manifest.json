@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T10:14:47Z",
+  "lastUpdated": "2026-03-21T10:20:35Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -379,6 +379,27 @@
         "license": {
           "type": "MIT",
           "url": "https://github.com/tplai/kbsim/blob/master/LICENSE.md"
+        }
+      },
+      {
+        "id": "fada0d4f-c510-4c19-8cc3-d756c186de8e",
+        "metadata": {
+          "name": "Topre Purple Hybrid PBT",
+          "brand": "Topre",
+          "author": "mechvibes",
+          "supportsKeyUp": false,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/topre/mechvibes/purple_hybrid_pbt"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/topre/mechvibes/purple_hybrid_pbt/fada0d4f-c510-4c19-8cc3-d756c186de8e.zip",
+          "size": 311893
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/hainguyents13/mechvibes/blob/main/LICENSE"
         }
       }
     ],
