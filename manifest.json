@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T10:06:44Z",
+  "lastUpdated": "2026-03-21T10:14:47Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -354,6 +354,27 @@
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/kailh/tplai/box_navy/c573d01e-2d20-4844-9286-a9e628ef8f3b.zip",
           "size": 24065
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/tplai/kbsim/blob/master/LICENSE.md"
+        }
+      },
+      {
+        "id": "f0cc3d8e-5b1e-4412-a3f0-8a4f70912d0e",
+        "metadata": {
+          "name": "NovelKeys Cream",
+          "brand": "NovelKeys",
+          "author": "tplai",
+          "supportsKeyUp": true,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/novelkeys/tplai/cream"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/novelkeys/tplai/cream/f0cc3d8e-5b1e-4412-a3f0-8a4f70912d0e.zip",
+          "size": 21341
         },
         "license": {
           "type": "MIT",
