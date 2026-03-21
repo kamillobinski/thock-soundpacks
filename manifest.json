@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-21T10:25:33Z",
+  "lastUpdated": "2026-03-21T14:41:14Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -421,6 +421,27 @@
         "license": {
           "type": "MIT",
           "url": "https://github.com/tplai/kbsim/blob/master/LICENSE.md"
+        }
+      },
+      {
+        "id": "c3f120e1-809f-4265-8167-14d708c99a48",
+        "metadata": {
+          "name": "Unknown",
+          "brand": "Unknown",
+          "author": "webdevcody",
+          "supportsKeyUp": true,
+          "category": "keyboard"
+        },
+        "content": {
+          "path": "keyboard/unknown/webdevcody/unknown"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/unknown/webdevcody/unknown/c3f120e1-809f-4265-8167-14d708c99a48.zip",
+          "size": 90503
+        },
+        "license": {
+          "type": "MIT",
+          "url": "https://github.com/webdevcody/type-joy/blob/main/LICENSE"
         }
       }
     ],
