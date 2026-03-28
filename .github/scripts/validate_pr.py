@@ -85,6 +85,15 @@ def validate_config_schema(config):
         fail("config.json metadata.supportsKeyUp must be a boolean")
 
 
+def validate_unique_audio_stems(soundpack_path):
+    stems = {}
+    for f in Path(soundpack_path).iterdir():
+        if f.is_file() and f.suffix.lower() in AUDIO_EXTENSIONS:
+            if f.stem in stems:
+                fail(f"Duplicate audio stem '{f.stem}': {stems[f.stem]} and {f.name}")
+            stems[f.stem] = f.name
+
+
 def validate_audio_files(soundpack_path, config):
     missing = []
     for entry in config["sounds"].values():
@@ -103,6 +112,7 @@ def main():
     soundpack_path = resolve_soundpack_path(changed_files)
     config = load_config(soundpack_path)
     validate_config_schema(config)
+    validate_unique_audio_stems(soundpack_path)
     validate_audio_files(soundpack_path, config)
     print("All checks passed")
 
