@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-28T02:37:13Z",
+  "lastUpdated": "2026-03-28T02:41:01Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -17,7 +17,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/alps/tplai/skcm_blue/52722920-07ec-45b4-91cc-6f29cad794d2.zip",
-          "size": 27786
+          "size": 87715
         },
         "license": {
           "type": "MIT",
