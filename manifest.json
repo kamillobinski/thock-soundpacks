@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-28T09:50:36Z",
+  "lastUpdated": "2026-03-28T09:58:38Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -59,7 +59,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/black_pbt/980c6cc1-7daf-4584-8b0e-643b3a811a6d.zip",
-          "size": 403959
+          "size": 1352214
         },
         "license": {
           "type": "MIT",
@@ -80,7 +80,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/blue_abs/cf535c6d-9cc7-46a0-bf53-af6d3aeef534.zip",
-          "size": 507898
+          "size": 1870192
         },
         "license": {
           "type": "MIT",
@@ -101,7 +101,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/blue_pbt/ca2d54d7-31d0-4177-b26a-43d99a3bcaaf.zip",
-          "size": 497492
+          "size": 1839436
         },
         "license": {
           "type": "MIT",
@@ -122,7 +122,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/brown_abs/186ca33e-9998-4a28-974c-c21ac353c16e.zip",
-          "size": 424274
+          "size": 1428804
         },
         "license": {
           "type": "MIT",
@@ -143,7 +143,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/brown_pbt/3aa3c556-ab47-4ab9-a791-498bf9910bf7.zip",
-          "size": 503008
+          "size": 1823031
         },
         "license": {
           "type": "MIT",
@@ -164,7 +164,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/red_abs/31071be3-c9ad-44a4-8d38-aaa7fe414a58.zip",
-          "size": 496267
+          "size": 1895840
         },
         "license": {
           "type": "MIT",
@@ -185,7 +185,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/red_pbt/e05fa018-400e-4d9c-b357-d5467b07650c.zip",
-          "size": 478770
+          "size": 1990241
         },
         "license": {
           "type": "MIT",
@@ -206,7 +206,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/drop/tplai/holy_panda/4da844a6-346e-4361-84fd-5bc142ff975e.zip",
-          "size": 21651
+          "size": 60283
         },
         "license": {
           "type": "MIT",
@@ -227,7 +227,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/durock/tplai/alpaca/23d8cf7b-f99b-49fc-ae84-3f99dc728ad9.zip",
-          "size": 21928
+          "size": 64959
         },
         "license": {
           "type": "MIT",
@@ -248,7 +248,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/everglide/mechvibes/crystal_purple/7a4c575c-2c5f-49f2-bcd0-966f0ac874a6.zip",
-          "size": 267360
+          "size": 1257830
         },
         "license": {
           "type": "MIT",
@@ -290,7 +290,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/gateron/tplai/ink_black/b9bfb429-16c6-449f-aa85-5da083696f68.zip",
-          "size": 20056
+          "size": 53131
         },
         "license": {
           "type": "MIT",
@@ -311,7 +311,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/gateron/tplai/ink_red/631754b0-eafe-4b14-b86e-61842f1f195c.zip",
-          "size": 22191
+          "size": 62498
         },
         "license": {
           "type": "MIT",
@@ -332,7 +332,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/gateron/tplai/turquoise_tealios/c556e214-5d78-4fc1-a7fe-3eb3f53152ba.zip",
-          "size": 20301
+          "size": 52894
         },
         "license": {
           "type": "MIT",
@@ -353,7 +353,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/kailh/tplai/box_navy/c573d01e-2d20-4844-9286-a9e628ef8f3b.zip",
-          "size": 24064
+          "size": 79099
         },
         "license": {
           "type": "MIT",
@@ -374,7 +374,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/novelkeys/tplai/cream/f0cc3d8e-5b1e-4412-a3f0-8a4f70912d0e.zip",
-          "size": 21340
+          "size": 60605
         },
         "license": {
           "type": "MIT",
@@ -395,7 +395,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/topre/mechvibes/purple_hybrid_pbt/fada0d4f-c510-4c19-8cc3-d756c186de8e.zip",
-          "size": 311893
+          "size": 1066740
         },
         "license": {
           "type": "MIT",
@@ -416,7 +416,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/topre/tplai/unknown/ab2657fe-dc0a-4c75-ab74-81d8f56002b0.zip",
-          "size": 26901
+          "size": 93496
         },
         "license": {
           "type": "MIT",
@@ -437,7 +437,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/unknown/webdevcody/unknown/c3f120e1-809f-4265-8167-14d708c99a48.zip",
-          "size": 90503
+          "size": 571152
         },
         "license": {
           "type": "MIT",
@@ -458,7 +458,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/ibm/tplai/buckling_spring/61861d39-1242-41f5-8cf9-5823c472ce28.zip",
-          "size": 29635
+          "size": 92991
         },
         "license": {
           "type": "MIT",
@@ -479,7 +479,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/quirky/freesound_community/quack/5e02cd62-f79b-43c4-8899-78bbb630a81d.zip",
-          "size": 26431
+          "size": 23885
         },
         "license": {
           "type": "Pixabay Content License",
