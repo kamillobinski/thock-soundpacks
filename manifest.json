@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-28T02:25:50Z",
+  "lastUpdated": "2026-03-28T02:34:53Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -502,7 +502,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/mouse/razer/sadiquecat/orochi_v2/3222385c-d428-4d98-8ce9-1cbc992c3373.zip",
-          "size": 16068
+          "size": 15899
         },
         "license": {
           "type": "CC0",
