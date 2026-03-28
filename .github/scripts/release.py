@@ -178,6 +178,9 @@ def create_zip(soundpack_path, soundpack_uuid, soundpack_type, config):
             for wav_path in sorted(Path(tmp).iterdir()):
                 if wav_path.is_file():
                     zf.write(wav_path, wav_path.name)
+            license_path = Path(soundpack_path) / "LICENSE"
+            if license_path.is_file():
+                zf.write(license_path, "LICENSE")
 
     size = zip_path.stat().st_size
     print(f"Created zip: {size} bytes")
