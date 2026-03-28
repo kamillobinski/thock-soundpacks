@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-28T09:58:38Z",
+  "lastUpdated": "2026-03-28T12:17:11Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -528,6 +528,27 @@
         "license": {
           "type": "Pixabay Content License",
           "url": "https://pixabay.com/pl/service/license-summary/"
+        }
+      },
+      {
+        "id": "92996284-89e5-42e7-81e7-5c5c1e25ebf2",
+        "metadata": {
+          "name": "Mamba Elite",
+          "brand": "Razer",
+          "author": "kamillobinski",
+          "supportsKeyUp": true,
+          "category": "mouse"
+        },
+        "content": {
+          "path": "mouse/razer/kamillobinski/mamba_elite"
+        },
+        "download": {
+          "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/mouse/razer/kamillobinski/mamba_elite/92996284-89e5-42e7-81e7-5c5c1e25ebf2.zip",
+          "size": 27342
+        },
+        "license": {
+          "type": "Proprietary",
+          "url": "https://raw.githubusercontent.com/kamillobinski/thock-soundpacks/refs/heads/dev/mouse/razer/kamillobinski/mamba_elite/LICENSE"
         }
       }
     ]
