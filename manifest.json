@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-28T00:14:33Z",
+  "lastUpdated": "2026-03-28T02:25:50Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -269,7 +269,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/everglide/mechvibes/oreo/c9f8ec9f-4fe0-414b-87ac-4d5b64be84e0.zip",
-          "size": 236636
+          "size": 987876
         },
         "license": {
           "type": "MIT",
