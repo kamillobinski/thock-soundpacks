@@ -1,0 +1,75 @@
+Thock Soundpack Proprietary License
+
+Copyright (c) 2026-present Kamil Łobiński. All rights reserved.
+
+
+DEFINITIONS
+
+"Soundpack" means the audio files, configuration files, and any other
+materials distributed in this package.
+
+"Permitted Application" means the Thock application developed and
+published by Kamil Łobiński, identified by the macOS bundle identifier
+dev.kamillobinski.Thock and maintained at the following canonical
+repository: https://github.com/kamillobinski/thock. In the event of a
+conflict between the bundle identifier and the repository URL, the
+bundle identifier takes precedence.
+
+"Use" means loading, playing, embedding, bundling, distributing, or
+otherwise incorporating the Soundpack or any portion of it into a
+software application or service.
+
+
+GRANT OF PERMISSION
+
+Subject to the terms of this License, Kamil Łobiński grants you a
+limited, non-exclusive, non-transferable, non-sublicensable right to
+Use the Soundpack solely within the Permitted Application.
+
+
+RESTRICTIONS
+
+Except as expressly permitted above, you may not:
+
+1. Use the Soundpack in any application, software, service, or product
+   other than the Permitted Application, regardless of whether such
+   application uses the name "Thock" or any similar name;
+2. Redistribute, sublicense, sell, rent, or otherwise transfer the
+   Soundpack or any portion of it to any third party;
+3. Modify, adapt, remix, or create derivative works based on the
+   Soundpack;
+4. Remove, alter, or obscure this License file or any copyright notice
+   from any copy of the Soundpack;
+5. Use the Soundpack for any commercial purpose outside the Permitted
+   Application.
+
+All rights not expressly granted in this License are reserved by
+Kamil Łobiński.
+
+
+NO WARRANTIES
+
+THE SOUNDPACK IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED. KAMIL ŁOBIŃSKI DISCLAIMS ALL WARRANTIES INCLUDING
+BUT NOT LIMITED TO FITNESS FOR A PARTICULAR PURPOSE AND
+NON-INFRINGEMENT.
+
+
+LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL KAMIL ŁOBIŃSKI BE LIABLE FOR ANY CLAIM, DAMAGES, OR
+OTHER LIABILITY ARISING FROM THE USE OF THIS SOUNDPACK.
+
+
+GOVERNING LAW
+
+This License is governed by the laws of Poland, without regard to its
+conflict of law provisions. Any disputes arising under this License
+shall be resolved in the courts of Poland.
+
+
+TERMINATION
+
+Your rights under this License terminate automatically and immediately
+upon any breach of its terms. Upon termination you must cease all Use
+of the Soundpack and destroy all copies in your possession.

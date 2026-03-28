@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "name": "Mamba Elite",
+    "brand": "Razer",
+    "author": "kamillobinski",
+    "supportsKeyUp": true,
+    "category": "mouse"
+  },
+  "license": {
+    "type": "Proprietary",
+    "url": "https://raw.githubusercontent.com/kamillobinski/thock-soundpacks/refs/heads/dev/mouse/razer/kamillobinski/mamba_elite/LICENSE"
+  },
+  "sounds": {
+    "left": {
+      "down": ["1.wav"],
+      "up": ["2.wav"]
+    },
+    "right": {
+      "down": ["3.wav"],
+      "up": ["4.wav"]
+    }
+  }
+}
