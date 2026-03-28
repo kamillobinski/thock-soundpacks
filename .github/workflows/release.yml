@@ -29,6 +29,9 @@ jobs:
         with:
           python-version: '3.14'
 
+      - name: Install ffmpeg
+        run: sudo apt-get install -y ffmpeg
+
       - name: Build soundpack
         run: python .github/scripts/release.py
         env:
