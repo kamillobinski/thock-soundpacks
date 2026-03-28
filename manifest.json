@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-03-28T02:41:01Z",
+  "lastUpdated": "2026-03-28T09:50:36Z",
   "soundpacks": {
     "keyboard": [
       {
@@ -38,7 +38,7 @@
         },
         "download": {
           "url": "https://github.com/kamillobinski/thock-soundpacks/raw/refs/heads/main/keyboard/cherry_mx/mechvibes/black_abs/de401889-0ccb-4522-a213-836aad88c447.zip",
-          "size": 468387
+          "size": 1973844
         },
         "license": {
           "type": "MIT",
