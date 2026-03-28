@@ -12,28 +12,12 @@
   },
   "sounds": {
     "left": {
-      "down": [
-        "1.wav",
-        "2.wav",
-        "3.wav"
-      ],
-      "up": [
-        "4.wav",
-        "5.wav",
-        "6.wav"
-      ]
+      "down": ["1.wav"],
+      "up": ["2.wav"]
     },
     "right": {
-      "down": [
-        "7.wav",
-        "8.wav",
-        "9.wav"
-      ],
-      "up": [
-        "10.wav",
-        "11.wav",
-        "12.wav"
-      ]
+      "down": ["3.wav"],
+      "up": ["4.wav"]
     }
   }
 }
